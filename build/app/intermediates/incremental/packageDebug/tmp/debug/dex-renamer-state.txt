@@ -1,0 +1,10 @@
+#Sat Oct 26 23:11:01 COT 2019
+path.2=classes3.dex
+path.1=classes2.dex
+path.0=classes.dex
+renamed.2=classes3.dex
+renamed.1=classes2.dex
+renamed.0=classes.dex
+base.2=/home/german/Documents/proyectos/test_firebase/build/app/intermediates/transforms/dexMerger/debug/0
+base.1=/home/german/Documents/proyectos/test_firebase/build/app/intermediates/transforms/dexMerger/debug/0
+base.0=/home/german/Documents/proyectos/test_firebase/build/app/intermediates/transforms/dexMerger/debug/0
