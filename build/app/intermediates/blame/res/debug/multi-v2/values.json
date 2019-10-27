@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/german/Documents/proyectos/test_firebase/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
+            "outputFile": "/home/german/Documents/proyectos/test_app/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
             "map": [
                 {
                     "source": "/home/german/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/dd478a8e713d72a8748bca2440d1dba0/res/values/values.xml",
@@ -57,7 +57,7 @@
                     }
                 },
                 {
-                    "source": "/home/german/Documents/proyectos/test_firebase/android/app/src/main/res/values/styles.xml",
+                    "source": "/home/german/Documents/proyectos/test_app/android/app/src/main/res/values/styles.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -73,23 +73,6 @@
                         "endLines": "123",
                         "endColumns": "12",
                         "endOffsets": "8215"
-                    }
-                },
-                {
-                    "source": "/home/german/Documents/proyectos/test_firebase/build/app/generated/res/google-services/debug/values/values.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,199,308,390,494,603,723,821",
-                        "endColumns": "143,108,81,103,108,119,97,74",
-                        "endOffsets": "194,303,385,489,598,718,816,891"
-                    },
-                    "to": {
-                        "startLines": "110,111,112,113,114,115,116,117",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "7011,7155,7264,7346,7450,7559,7679,7777",
-                        "endColumns": "143,108,81,103,108,119,97,74",
-                        "endOffsets": "7150,7259,7341,7445,7554,7674,7772,7847"
                     }
                 },
                 {
@@ -109,6 +92,23 @@
                         "endLines": "2,3,4,5,6,7,8,9,42,61,92,93,94,95,96,97,98,99,101,102,103,104,105,106,107,108,109",
                         "endColumns": "89,79,89,89,79,80,79,79,20,20,104,180,124,106,179,122,115,102,187,104,180,124,174,147,62,61,78",
                         "endOffsets": "190,270,360,450,530,611,691,771,2417,2834,4778,4959,5084,5191,5371,5494,5610,5713,6068,6173,6354,6479,6654,6802,6865,6927,7006"
+                    }
+                },
+                {
+                    "source": "/home/german/Documents/proyectos/test_app/build/app/generated/res/google-services/debug/values/values.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,199,308,390,494,603,723,821",
+                        "endColumns": "143,108,81,103,108,119,97,74",
+                        "endOffsets": "194,303,385,489,598,718,816,891"
+                    },
+                    "to": {
+                        "startLines": "110,111,112,113,114,115,116,117",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "7011,7155,7264,7346,7450,7559,7679,7777",
+                        "endColumns": "143,108,81,103,108,119,97,74",
+                        "endOffsets": "7150,7259,7341,7445,7554,7674,7772,7847"
                     }
                 }
             ]

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/german/Documents/proyectos/test_firebase/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-lv/values-lv.xml",
+            "outputFile": "/home/german/Documents/proyectos/test_app/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-lv/values-lv.xml",
             "map": [
                 {
                     "source": "/home/german/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/5eb87873e5fb11cb3168cf11b0fcf8ef/res/values-lv/values.xml",

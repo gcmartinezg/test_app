@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/german/Documents/proyectos/test_firebase/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-sw/values-sw.xml",
+            "outputFile": "/home/german/Documents/proyectos/test_app/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-sw/values-sw.xml",
             "map": [
                 {
                     "source": "/home/german/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a6590278de1730f0a061db900bfffd17/res/values-sw/values-sw.xml",
