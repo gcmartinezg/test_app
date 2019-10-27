@@ -4,7 +4,7 @@
             "outputFile": "/home/german/Documents/proyectos/test_app/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rIN/values-en-rIN.xml",
             "map": [
                 {
-                    "source": "/home/german/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a6590278de1730f0a061db900bfffd17/res/values-en-rIN/values-en-rIN.xml",
+                    "source": "/home/german/.gradle/caches/transforms-1/files-1.1/core-1.0.0-rc01.aar/d1d9fefc5a5eee56dd43c998fc7f7c5c/res/values-en-rIN/values-en-rIN.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

@@ -4,7 +4,7 @@
             "outputFile": "/home/german/Documents/proyectos/test_app/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-lt/values-lt.xml",
             "map": [
                 {
-                    "source": "/home/german/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a6590278de1730f0a061db900bfffd17/res/values-lt/values-lt.xml",
+                    "source": "/home/german/.gradle/caches/transforms-1/files-1.1/core-1.0.0-rc01.aar/d1d9fefc5a5eee56dd43c998fc7f7c5c/res/values-lt/values-lt.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -21,24 +21,7 @@
                     }
                 },
                 {
-                    "source": "/home/german/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/5eb87873e5fb11cb3168cf11b0fcf8ef/res/values-lt/values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
-                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
-                        "startOffsets": "245,350,534,664,769,981,1109,1254,1385,1610,1717,1913,2045,2257,2433,2527,2619",
-                        "endColumns": "104,183,129,104,211,127,144,130,224,106,195,131,211,175,93,91,114",
-                        "endOffsets": "349,533,663,768,980,1108,1253,1384,1609,1716,1912,2044,2256,2432,2526,2618,2733"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,6,7,8,9,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,214,398,532,641,853,985,1134,1487,1712,1823,2019,2155,2367,2547,2645,2741",
-                        "endColumns": "108,183,133,108,211,131,148,134,224,110,195,135,211,179,97,95,118",
-                        "endOffsets": "209,393,527,636,848,980,1129,1264,1707,1818,2014,2150,2362,2542,2640,2736,2855"
-                    }
-                },
-                {
-                    "source": "/home/german/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.2.0.aar/22b2e83999b80b9a0978de05524e0763/res/values-lt/values.xml",
+                    "source": "/home/german/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-16.2.0.aar/3ec0de740a2b14f9240e78f8f2e91002/res/values-lt/values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -52,6 +35,23 @@
                         "startOffsets": "1269",
                         "endColumns": "217",
                         "endOffsets": "1482"
+                    }
+                },
+                {
+                    "source": "/home/german/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/457209ffdb38a2ed8588ab4f1a33ab03/res/values-lt/values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "245,350,534,664,769,981,1109,1254,1385,1610,1717,1913,2045,2257,2433,2527,2619",
+                        "endColumns": "104,183,129,104,211,127,144,130,224,106,195,131,211,175,93,91,114",
+                        "endOffsets": "349,533,663,768,980,1108,1253,1384,1609,1716,1912,2044,2256,2432,2526,2618,2733"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,214,398,532,641,853,985,1134,1487,1712,1823,2019,2155,2367,2547,2645,2741",
+                        "endColumns": "108,183,133,108,211,131,148,134,224,110,195,135,211,179,97,95,118",
+                        "endOffsets": "209,393,527,636,848,980,1129,1264,1707,1818,2014,2150,2362,2542,2640,2736,2855"
                     }
                 }
             ]
