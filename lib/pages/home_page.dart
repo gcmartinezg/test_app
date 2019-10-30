@@ -33,6 +33,41 @@ class _MyHomePageState extends State<HomePage> {
    );
  }
 
+ 	
+  _dismissDialog() {
+    Navigator.pop(context);
+  }
+
+ /*void _showMaterialDialog() {
+    showDialog(
+        context: context,
+        builder: (context) {
+          return AlertDialog(
+            title: Text('Add Baby'),
+            content: Text('Enter the baby\'s name'),
+            actions: <Widget>[
+              TextFormField(
+                decoration: new InputDecoration(
+                  hintText: 'Name',
+                ),
+              ),
+              FlatButton(
+                  onPressed: () {
+                    _dismissDialog();
+                  },
+                  child: Text('Close')),
+              FlatButton(
+                onPressed: () {
+                  print('Add');
+                  _dismissDialog();
+                },
+                child: Text('HelloWorld!'),
+              )
+            ],
+          );
+        });
+  }*/
+
  Widget _buildBody(BuildContext context) {
  return StreamBuilder<QuerySnapshot>(
    stream: Firestore.instance.collection('baby').snapshots(),
