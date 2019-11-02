@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:test_firebase/services/authentication.dart';
@@ -111,8 +112,96 @@ class _MyHomePageState extends State<HomePage> {
           title: Text(record.name),
           trailing: Text(record.votes.toString()),
           onTap: () => record.reference.updateData({'votes': record.votes + 1}),
+          onLongPress: () => _showDetails(record),
         ),
       ),
+    );
+  }
+
+  _showDetails(Record record){
+    showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: Text(record.name + ' Information'),
+          content: ListView(
+            children: <Widget>[
+              _buildHeader(record),
+              _buildInformation(record),
+            ],
+          ),
+          actions: <Widget>[
+            FlatButton(
+              onPressed: () {
+                _dismissDialog();
+              },
+                child: Text('Close')
+            )
+          ],
+        );
+      }
+    );
+  }
+
+  _buildHeader(Record record){
+    return Container(
+      //decoration: BoxDecoration(color: Colors.blue),
+      width: MediaQuery.of(context).size.width,
+      height: MediaQuery.of(context).size.height * 0.30,
+      child: Column(
+        children: <Widget>[
+          Image.network(record.ppUrl,height: 100,width: 100,),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.all(8),
+                child: FittedBox(
+                  child: Text(
+                    record.name + ' ' + record.lastName,
+                    style: TextStyle(color: Colors.black),
+                  ),
+                  fit: BoxFit.fitWidth,
+                )
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+
+
+
+
+
+
+  _buildInformation(Record record){
+    return Container(
+      child: ListView(
+        shrinkWrap: true,
+        children: <Widget>[
+          Card(
+            child: ListTile(
+              title: Text(
+                record.name,
+                overflow: TextOverflow.clip,
+              ),
+              subtitle: Text('Name'),
+            ),
+          ),
+          Card(
+            child: ListTile(
+              //TODO cambiar iconos
+              title: Text(
+                record.lastName,
+                overflow: TextOverflow.clip,
+              ),
+              subtitle: Text('Last Name'),
+            ),
+          )
+        ],
+      )
     );
   }
 
@@ -121,13 +210,19 @@ class _MyHomePageState extends State<HomePage> {
 class Record {
  final String name;
  final int votes;
+ final String ppUrl;
+ final String lastName;
  final DocumentReference reference;
 
  Record.fromMap(Map<String, dynamic> map, {this.reference})
      : assert(map['name'] != null),
        assert(map['votes'] != null),
+       assert(map['ppUrl'] != null),
+       assert(map['lastName'] != null),
        name = map['name'],
-       votes = map['votes'];
+       votes = map['votes'],
+       ppUrl = map['ppUrl'],
+       lastName = map['lastName'];
 
  Record.fromSnapshot(DocumentSnapshot snapshot)
      : this.fromMap(snapshot.data, reference: snapshot.reference);
