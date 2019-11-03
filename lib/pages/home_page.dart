@@ -1,7 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:test_firebase/domains/record.dart';
+import 'package:test_firebase/pages/baby_details_page.dart';
 import 'package:test_firebase/services/authentication.dart';
 
 class HomePage extends StatefulWidget {
@@ -24,10 +25,12 @@ class _MyHomePageState extends State<HomePage> {
      appBar: AppBar(
        title: Text('Baby Name Votes'),
        actions: <Widget>[
-            new FlatButton(
-                child: new Text('Logout',
-                    style: new TextStyle(fontSize: 17.0, color: Colors.white)),
-                onPressed: signOut)
+          new FlatButton(
+            child: new Text(
+              'Logout',
+              style: new TextStyle(fontSize: 17.0, color: Colors.white)
+            ),
+            onPressed: signOut)
           ],
        ),
      body: _buildBody(context),
@@ -35,9 +38,9 @@ class _MyHomePageState extends State<HomePage> {
  }
 
  	
-  _dismissDialog() {
+  /*_dismissDialog() {
     Navigator.pop(context);
-  }
+  }*/
 
  /*void _showMaterialDialog() {
     showDialog(
@@ -69,16 +72,18 @@ class _MyHomePageState extends State<HomePage> {
         });
   }*/
 
- Widget _buildBody(BuildContext context) {
- return StreamBuilder<QuerySnapshot>(
-   stream: Firestore.instance.collection('baby').snapshots(),
-   builder: (context, snapshot) {
-     if (!snapshot.hasData) return LinearProgressIndicator();
+  Widget _buildBody(BuildContext context) {
+    return StreamBuilder<QuerySnapshot>(
+      stream: Firestore.instance.collection('baby').snapshots(),
+      builder: (context, snapshot) {
+        if (!snapshot.hasData) {
+          return LinearProgressIndicator();
+        }
 
-     return _buildList(context, snapshot.data.documents);
-   },
- );
-}
+        return _buildList(context, snapshot.data.documents);
+      },
+    );
+  }
 
   Widget _buildList(BuildContext context, List<DocumentSnapshot> snapshot) {
     return ListView(
@@ -119,6 +124,19 @@ class _MyHomePageState extends State<HomePage> {
   }
 
   _showDetails(Record record){
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => BabyDetails(
+          auth: widget.auth, 
+          userId: widget.userId, 
+          selectedBaby: record
+        )
+      )
+    );
+  }
+
+  /*_showDetails(Record record){
     showDialog(
       context: context,
       builder: (context) {
@@ -171,11 +189,6 @@ class _MyHomePageState extends State<HomePage> {
     );
   }
 
-
-
-
-
-
   _buildInformation(Record record){
     return Container(
       child: ListView(
@@ -203,30 +216,6 @@ class _MyHomePageState extends State<HomePage> {
         ],
       )
     );
-  }
+  }*/
 
-}
-
-class Record {
- final String name;
- final int votes;
- final String ppUrl;
- final String lastName;
- final DocumentReference reference;
-
- Record.fromMap(Map<String, dynamic> map, {this.reference})
-     : assert(map['name'] != null),
-       assert(map['votes'] != null),
-       assert(map['ppUrl'] != null),
-       assert(map['lastName'] != null),
-       name = map['name'],
-       votes = map['votes'],
-       ppUrl = map['ppUrl'],
-       lastName = map['lastName'];
-
- Record.fromSnapshot(DocumentSnapshot snapshot)
-     : this.fromMap(snapshot.data, reference: snapshot.reference);
-
- @override
- String toString() => "Record<$name:$votes>";
 }

@@ -4,7 +4,7 @@
             "outputFile": "/home/german/Documents/proyectos/test_app/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-hr/values-hr.xml",
             "map": [
                 {
-                    "source": "/home/german/.gradle/caches/transforms-1/files-1.1/core-1.0.0-rc01.aar/d1d9fefc5a5eee56dd43c998fc7f7c5c/res/values-hr/values-hr.xml",
+                    "source": "/home/german/.gradle/caches/transforms-1/files-1.1/core-1.0.1.aar/cd93f901c634591293e11a5c8c1ebc2f/res/values-hr/values-hr.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
